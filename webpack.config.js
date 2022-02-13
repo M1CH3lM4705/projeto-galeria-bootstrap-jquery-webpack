@@ -9,7 +9,7 @@ module.exports = {
     mode: modoDev ? 'development' : 'production',
     entry: './src/index.js',
     devServer: {
-        contentBase: './build',
+        contentBase: './public',
         port: 9000,
     },
     optimization: {
@@ -24,7 +24,7 @@ module.exports = {
     },
     output: {
         filename: 'app.js',
-        path: __dirname + '/build'
+        path: __dirname + '/public'
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: 'estilo.css' }),
